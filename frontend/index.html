@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Q&A System</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PDF Q&A System</h1>
+        
+        <!-- PDF Upload Section -->
+        <div class="section">
+            <h2>Upload PDF</h2>
+            <div class="border-dashed" id="dropZone">
+                <input type="file" id="pdfFile" accept=".pdf" class="hidden">
+                <div class="upload-content">
+                    <p>Drag and drop a PDF file here or click to browse</p>
+                    <button onclick="document.getElementById('pdfFile').click()">Choose File</button>
+                </div>
+            </div>
+            <div id="uploadStatus" class="hidden">Processing...</div>
+            <div id="uploadPreview" class="hidden">
+                <h3>Preview:</h3>
+                <p id="previewText"></p>
+            </div>
+        </div>
+
+        <!-- Question Section -->
+        <div class="section">
+            <h2>Ask Questions</h2>
+            <div class="question-form">
+                <input type="text" id="question" placeholder="Enter your question...">
+                <button id="askButton">Ask</button>
+            </div>
+            <div id="loadingAnswer" class="hidden">Generating answer...</div>
+            <div id="answerSection" class="hidden">
+                <h3>Answer:</h3>
+                <p id="answer"></p>
+            </div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html> 

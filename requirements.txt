@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+python-dotenv
+pydantic
+pydantic-settings
+openai
+chromadb
+PyMuPDF
+langchain
+langchain-community
+tiktoken
+python-multipart

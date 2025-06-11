@@ -1,0 +1,30 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+
+# Data and persistent storage (should be mounted as volumes, not copied into image)
+data/storage/
+data/chroma/
+
+# Git and version control
+.git/
+.gitignore
+
+# Environment and config files (should be mounted or passed at runtime)
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test and local files
+*.log
+*.sqlite3
+*.db
+create_test_pdf.py
+test.pdf
+test_backend.py 
