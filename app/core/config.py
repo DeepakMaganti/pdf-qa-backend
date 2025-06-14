@@ -1,6 +1,5 @@
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 from typing import List
-import os
 
 class Settings(BaseSettings):
     OPENAI_API_KEY: str
@@ -8,8 +7,10 @@ class Settings(BaseSettings):
     CHROMA_DB_DIR: str = "data/chroma"
     CORS_ORIGINS: List[str] = ["http://localhost:3000", "http://localhost:8000"]
 
-    class Config:
-        env_file = ".env"  # Optional: will use this file if available (for local dev)
-        case_sensitive = True
+    model_config = SettingsConfigDict(
+        env_file=".env",       # Load from .env file
+        case_sensitive=True,
+        extra="allow"          # ✅ Accept extra env vars like HOST, PORT
+    )
 
 settings = Settings()
