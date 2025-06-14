@@ -101,7 +101,7 @@ cython_debug/
 Thumbs.db
 
 # Chroma data (large vector DB files)
-data/chroma/
+#data/chroma/
 
 # dotenv environment variables
 .env
